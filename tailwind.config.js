@@ -6,17 +6,17 @@ module.exports = {
     extend: {
       backgroundColor: {
         main: "#141414",
-        secondary: "#505050",
-         special:"#ffed00",
+        secondary: "#3c3c3c",
+         special:"#5add00",
       },
       textColor: {
         main: "#ececec",
         secondary: "#8a8a8a",
-        special:"#ffed00",
+        special:"#5add00",
         dark: "#141414",
       },
       borderColor: {
-        special:"#ffed00",
+        special:"#5add00",
       }
     },
   },
