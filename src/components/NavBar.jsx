@@ -1,6 +1,7 @@
 import Menu from "../images/list.svg";
 import Fav from "../images/fav.png";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
@@ -28,7 +29,9 @@ const NavBar = () => {
 
   return (
     <div className="p-4 shadow-md flex justify-between" ref={ref}>
-      <img src={Fav} alt="favicone" />
+      <Link to="/">
+        <img src={Fav} alt="favicone" />
+      </Link>
       <h1 className="text-main text-xl">
         Grégory <span className="text-special">ALEXIS</span>
       </h1>
@@ -42,10 +45,15 @@ const NavBar = () => {
         }`}
       >
         <ul className="flex flex-col justify-center items-center h-full">
-          <li className="phoneNavbarLink">Home</li>
-          <li className="phoneNavbarLink">Projets</li>
-          <li className="phoneNavbarLink">Qui suis-je ?</li>
-          <li className="phoneNavbarLink">Mes compétences</li>
+          <li className="phoneNavbarLink">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="phoneNavbarLink">
+            <Link to="/projets">Projets</Link>
+          </li>
+          <li className="phoneNavbarLink">
+            <Link to="/skills">Mes Compétence</Link>
+          </li>
         </ul>
       </div>
     </div>
